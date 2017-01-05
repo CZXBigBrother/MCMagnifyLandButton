@@ -47,34 +47,21 @@
     self.boundDH = 0;
 }
 - (void)addRight:(CGFloat)width {
-    [self clear];
     self.boundW = width;
-    //    self.boundX = width * 0.5;
-    //    self.boundDW = width * 0.5;
 }
 - (void)addLeft:(CGFloat)width {
-    [self clear];
     self.boundX = -width;
     self.boundW = width;
-    //    self.boundX = -width * 0.5;
-    //    self.boundDW = width * 0.5;
 }
 - (void)addUp:(CGFloat)width {
-    [self clear];
     self.boundY = - width;
     self.boundH = width;
-    //    self.boundY = -width * 0.5;
-    //    self.boundDH = width * 0.5;
 }
 - (void)addDown:(CGFloat)width {
-    [self clear];
     self.boundH = width;
-    //    self.boundY = width * 0.5;
-    //    self.boundDH = width * 0.5;
 }
 - (void)multiLand:(NSInteger)multi {
     NSAssert(multi != 0, @"multi can not be zero");
-    [self clear];
     self.boundDW = self.bounds.size.width * multi/2;
     self.boundDH = self.bounds.size.height * multi/2;
 }

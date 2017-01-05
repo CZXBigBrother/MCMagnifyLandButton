@@ -17,8 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
     MCMagnifyLandButton * clickBtn = [[MCMagnifyLandButton alloc]init];
     clickBtn.frame = (CGRect){CGPointZero, {100, 100}};
     clickBtn.center = (CGPoint){self.view.frame.size.width/2,self.view.frame.size.height/2};
@@ -58,6 +56,7 @@
     clickBtnD.userInteractionEnabled = NO;
     [self.view addSubview:clickBtnD];
 }
+
 - (void)buttonOnClick:(UIButton *)sender {
     NSLog(@"buttonOnClick");
 }
