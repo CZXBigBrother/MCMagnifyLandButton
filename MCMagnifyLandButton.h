@@ -52,7 +52,7 @@
  */
 - (void)moveDown:(CGFloat)width;
 /*
- *  原始大小翻倍,不包括拓展空间
+ *  原始大小翻倍,不包括拓展空间(不能为0)
  */
 - (void)multiLand:(NSInteger)multi;
 @end
