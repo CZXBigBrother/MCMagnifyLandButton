@@ -78,6 +78,10 @@
     }
     [self freshShow];
 }
+- (IBAction)clear:(id)sender {
+    [self.landButton clear];
+    [self freshShow];
+}
 
 - (void)freshShow {
     CGRect frame = CGRectMake(self.landButton.frame.origin.x + self.landButton.boundX, self.landButton.frame.origin.y + self.landButton.boundY, self.landButton.frame.size.width + self.landButton.boundW, self.landButton.frame.size.height + self.landButton.boundH);
