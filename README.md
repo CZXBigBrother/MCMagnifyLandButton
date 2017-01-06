@@ -65,3 +65,4 @@
 - (void)multiLand:(NSInteger)multi;
 ```
 Demo里写的可能更详细,可以下载来看看,代码量其实很小
+如果喜欢就star一下吧谢谢
