@@ -43,16 +43,16 @@
 - (IBAction)addButton:(UIButton *)sender {
     switch (sender.tag) {
         case 0:
-            [self.landButton addUp:50];
+            [self.landButton increaseUp:50];
             break;
         case 1:
-            [self.landButton addDown:50];
+            [self.landButton increaseDown:50];
             break;
         case 2:
-            [self.landButton addLeft:50];
+            [self.landButton increaseLeft:50];
             break;
         case 3:
-            [self.landButton addRight:50];
+            [self.landButton increaseRight:50];
             break;
         default:
             break;

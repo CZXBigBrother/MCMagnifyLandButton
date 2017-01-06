@@ -44,18 +44,18 @@
     self.boundDW = 0;
     self.boundDH = 0;
 }
-- (void)addRight:(CGFloat)width {
+- (void)increaseRight:(CGFloat)width {
     self.boundW += width;
 }
-- (void)addLeft:(CGFloat)width {
+- (void)increaseLeft:(CGFloat)width {
     self.boundX += -width;
     self.boundW += width;
 }
-- (void)addUp:(CGFloat)width {
+- (void)increaseUp:(CGFloat)width {
     self.boundY += - width;
     self.boundH += width;
 }
-- (void)addDown:(CGFloat)width {
+- (void)increaseDown:(CGFloat)width {
     self.boundH += width;
 }
 - (void)multiLand:(NSInteger)multi {

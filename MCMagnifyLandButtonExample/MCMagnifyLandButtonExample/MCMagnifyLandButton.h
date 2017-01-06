@@ -16,10 +16,10 @@
 @property(assign, nonatomic,readonly) CGFloat boundDW;
 @property(assign, nonatomic,readonly) CGFloat boundDH;
 - (void)clear;
-- (void)addRight:(CGFloat)width;
-- (void)addLeft:(CGFloat)width;
-- (void)addUp:(CGFloat)width;
-- (void)addDown:(CGFloat)width;
+- (void)increaseRight:(CGFloat)width;
+- (void)increaseLeft:(CGFloat)width;
+- (void)increaseUp:(CGFloat)width;
+- (void)increaseDown:(CGFloat)width;
 - (void)moveRight:(CGFloat)width;
 - (void)moveLeft:(CGFloat)width;
 - (void)moveUp:(CGFloat)width;
