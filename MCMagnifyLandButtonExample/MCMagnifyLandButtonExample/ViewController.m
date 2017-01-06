@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "MCMagnifyLandButton.h"
 
+#define widthS (50)
+
 @interface ViewController ()
 @property (weak, nonatomic) UIView *showView;
 @property (weak, nonatomic) MCMagnifyLandButton *landButton;
@@ -21,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     MCMagnifyLandButton * clickBtn = [[MCMagnifyLandButton alloc]init];
-    clickBtn.frame = (CGRect){CGPointZero, {50, 50}};
+    clickBtn.frame = (CGRect){CGPointZero, {widthS, widthS}};
     clickBtn.center = (CGPoint){self.view.frame.size.width/2,self.view.frame.size.height/2};
     clickBtn.backgroundColor = [UIColor greenColor];
     [clickBtn addTarget:self action:@selector(buttonOnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -43,16 +45,16 @@
 - (IBAction)addButton:(UIButton *)sender {
     switch (sender.tag) {
         case 0:
-            [self.landButton increaseUp:50];
+            [self.landButton increaseUp:widthS];
             break;
         case 1:
-            [self.landButton increaseDown:50];
+            [self.landButton increaseDown:widthS];
             break;
         case 2:
-            [self.landButton increaseLeft:50];
+            [self.landButton increaseLeft:widthS];
             break;
         case 3:
-            [self.landButton increaseRight:50];
+            [self.landButton increaseRight:widthS];
             break;
         default:
             break;
@@ -62,16 +64,16 @@
 - (IBAction)moveButton:(UIButton *)sender {
     switch (sender.tag) {
         case 0:
-            [self.landButton moveUp:50];
+            [self.landButton moveUp:widthS];
             break;
         case 1:
-            [self.landButton moveDown:50];
+            [self.landButton moveDown:widthS];
             break;
         case 2:
-            [self.landButton moveLeft:50];
+            [self.landButton moveLeft:widthS];
             break;
         case 3:
-            [self.landButton moveRight:50];
+            [self.landButton moveRight:widthS];
             break;
         default:
             break;
