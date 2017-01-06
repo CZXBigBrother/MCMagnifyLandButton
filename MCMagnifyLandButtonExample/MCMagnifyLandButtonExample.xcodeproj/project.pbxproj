@@ -15,7 +15,7 @@
 		414B34B11E1E55BD00DE0683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 414B34AF1E1E55BD00DE0683 /* LaunchScreen.storyboard */; };
 		414B34BC1E1E55BD00DE0683 /* MCMagnifyLandButtonExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 414B34BB1E1E55BD00DE0683 /* MCMagnifyLandButtonExampleTests.m */; };
 		414B34C71E1E55BD00DE0683 /* MCMagnifyLandButtonExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 414B34C61E1E55BD00DE0683 /* MCMagnifyLandButtonExampleUITests.m */; };
-		414B34D61E1E55F000DE0683 /* MCMagnifyLandButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 414B34D51E1E55F000DE0683 /* MCMagnifyLandButton.m */; };
+		41B0DEC21E1F735E0090D385 /* MCMagnifyLandButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B0DEC11E1F735E0090D385 /* MCMagnifyLandButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		414B34C21E1E55BD00DE0683 /* MCMagnifyLandButtonExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCMagnifyLandButtonExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		414B34C61E1E55BD00DE0683 /* MCMagnifyLandButtonExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCMagnifyLandButtonExampleUITests.m; sourceTree = "<group>"; };
 		414B34C81E1E55BD00DE0683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		414B34D41E1E55F000DE0683 /* MCMagnifyLandButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMagnifyLandButton.h; sourceTree = "<group>"; };
-		414B34D51E1E55F000DE0683 /* MCMagnifyLandButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMagnifyLandButton.m; sourceTree = "<group>"; };
+		41B0DEC01E1F735E0090D385 /* MCMagnifyLandButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCMagnifyLandButton.h; path = ../../MCMagnifyLandButton.h; sourceTree = "<group>"; };
+		41B0DEC11E1F735E0090D385 /* MCMagnifyLandButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCMagnifyLandButton.m; path = ../../MCMagnifyLandButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +104,12 @@
 		414B34A01E1E55BD00DE0683 /* MCMagnifyLandButtonExample */ = {
 			isa = PBXGroup;
 			children = (
+				41B0DEC01E1F735E0090D385 /* MCMagnifyLandButton.h */,
+				41B0DEC11E1F735E0090D385 /* MCMagnifyLandButton.m */,
 				414B34A41E1E55BD00DE0683 /* AppDelegate.h */,
 				414B34A51E1E55BD00DE0683 /* AppDelegate.m */,
 				414B34A71E1E55BD00DE0683 /* ViewController.h */,
 				414B34A81E1E55BD00DE0683 /* ViewController.m */,
-				414B34D41E1E55F000DE0683 /* MCMagnifyLandButton.h */,
-				414B34D51E1E55F000DE0683 /* MCMagnifyLandButton.m */,
 				414B34AA1E1E55BD00DE0683 /* Main.storyboard */,
 				414B34AD1E1E55BD00DE0683 /* Assets.xcassets */,
 				414B34AF1E1E55BD00DE0683 /* LaunchScreen.storyboard */,
@@ -283,7 +283,7 @@
 			files = (
 				414B34A91E1E55BD00DE0683 /* ViewController.m in Sources */,
 				414B34A61E1E55BD00DE0683 /* AppDelegate.m in Sources */,
-				414B34D61E1E55F000DE0683 /* MCMagnifyLandButton.m in Sources */,
+				41B0DEC21E1F735E0090D385 /* MCMagnifyLandButton.m in Sources */,
 				414B34A31E1E55BD00DE0683 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,6 +522,7 @@
 				414B34CD1E1E55BD00DE0683 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		414B34CE1E1E55BD00DE0683 /* Build configuration list for PBXNativeTarget "MCMagnifyLandButtonExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +531,7 @@
 				414B34D01E1E55BD00DE0683 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		414B34D11E1E55BD00DE0683 /* Build configuration list for PBXNativeTarget "MCMagnifyLandButtonExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +540,7 @@
 				414B34D31E1E55BD00DE0683 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
