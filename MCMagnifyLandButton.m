@@ -32,7 +32,7 @@
     _boundDH = boundDH;
 }
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
-    CGRect bounds = CGRectMake(0 + self.boundX, 0 + self.boundY, self.bounds.size.width + self.boundW, self.bounds.size.height + self.boundH);
+    CGRect bounds = CGRectMake(0 + self.boundX, 0 + self.boundY, self.frame.size.width + self.boundW, self.frame.size.height + self.boundH);
     bounds = CGRectInset(bounds, -self.boundDW, -self.boundDH);
     return CGRectContainsPoint(bounds, point);
 }
@@ -44,6 +44,7 @@
     self.boundDW = 0;
     self.boundDH = 0;
 }
+//---------------increase--------------------
 - (void)increaseRight:(CGFloat)width {
     self.boundW += width;
 }
@@ -52,12 +53,32 @@
     self.boundW += width;
 }
 - (void)increaseUp:(CGFloat)width {
-    self.boundY += - width;
+    self.boundY += -width;
     self.boundH += width;
 }
 - (void)increaseDown:(CGFloat)width {
     self.boundH += width;
 }
+//----------------reduce---------------------
+- (void)reduceRight:(CGFloat)width {
+    if (self.frame.size.width + self.boundW - width <= 0) {return;}
+    self.boundW += -width;
+}
+- (void)reduceLeft:(CGFloat)width {
+    if (self.frame.size.width + self.boundW - width <= 0) {return;}
+    self.boundX += width;
+    self.boundW += -width;
+}
+- (void)reduceUp:(CGFloat)width {
+    if (self.frame.size.height + self.boundH - width <= 0) {return;}
+    self.boundY += width;
+    self.boundH += -width;
+}
+- (void)reduceDown:(CGFloat)width {
+    if (self.frame.size.height + self.boundH - width <= 0) {return;}
+    self.boundH += -width;
+}
+//----------------move-----------------------
 - (void)multiLand:(NSInteger)multi {
     NSAssert(multi != 0, @"multi can not be zero");
     self.boundDW = self.bounds.size.width * multi/2;
@@ -75,5 +96,9 @@
 - (void)moveDown:(CGFloat)width {
     self.boundY += width;
 }
++ (CGRect)showLand:(MCMagnifyLandButton *)button {
+    CGRect frame = CGRectMake(button.frame.origin.x + button.boundX, button.frame.origin.y + button.boundY, button.frame.size.width + button.boundW, button.frame.size.height + button.boundH);
+    return frame;
 
+}
 @end

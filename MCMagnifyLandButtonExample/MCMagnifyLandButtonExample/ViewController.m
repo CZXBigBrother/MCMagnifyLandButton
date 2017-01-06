@@ -62,6 +62,22 @@
     [self freshShow];
 }
 - (IBAction)moveButton:(UIButton *)sender {
+//    switch (sender.tag) {
+//        case 0:
+//            [self.landButton reduceUp:widthS];
+//            break;
+//        case 1:
+//            [self.landButton reduceDown:widthS];
+//            break;
+//        case 2:
+//            [self.landButton reduceLeft:widthS];
+//            break;
+//        case 3:
+//            [self.landButton reduceRight:widthS];
+//            break;
+//        default:
+//            break;
+//    }
     switch (sender.tag) {
         case 0:
             [self.landButton moveUp:widthS];
@@ -86,8 +102,7 @@
 }
 
 - (void)freshShow {
-    CGRect frame = CGRectMake(self.landButton.frame.origin.x + self.landButton.boundX, self.landButton.frame.origin.y + self.landButton.boundY, self.landButton.frame.size.width + self.landButton.boundW, self.landButton.frame.size.height + self.landButton.boundH);
-    self.showView.frame = frame;
+    self.showView.frame = [MCMagnifyLandButton showLand:self.landButton];
 }
 - (void)buttonOnClick:(UIButton *)sender {
     NSLog(@"buttonOnClick");

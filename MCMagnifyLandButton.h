@@ -36,6 +36,22 @@
  */
 - (void)increaseDown:(CGFloat)width;
 /*
+ *  减少右边点击空间
+ */
+- (void)reduceRight:(CGFloat)width;
+/*
+ *  减少左边点击空间
+ */
+- (void)reduceLeft:(CGFloat)width;
+/*
+ *  减少上层点击空间
+ */
+- (void)reduceUp:(CGFloat)width;
+/*
+ *  减少下层点击空间
+ */
+- (void)reduceDown:(CGFloat)width;
+/*
  *  向右移动
  */
 - (void)moveRight:(CGFloat)width;
@@ -55,4 +71,8 @@
  *  原始大小翻倍,不包括拓展空间(不能为0)
  */
 - (void)multiLand:(NSInteger)multi;
+/*
+ *  返回可点击区域的frame
+ */
++ (CGRect)showLand:(MCMagnifyLandButton *)button;
 @end
