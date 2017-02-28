@@ -40,7 +40,7 @@
     self.showView = land;
     land.userInteractionEnabled = NO;
     [self.view addSubview:land];
-
+//    [[self.landButton moveUp:widthS]increaseUp:widthS];
 }
 - (IBAction)addButton:(UIButton *)sender {
     switch (sender.tag) {

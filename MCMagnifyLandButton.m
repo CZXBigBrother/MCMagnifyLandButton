@@ -45,56 +45,69 @@
     self.boundDH = 0;
 }
 //---------------increase--------------------
-- (void)increaseRight:(CGFloat)width {
+- (instancetype)increaseRight:(CGFloat)width {
     self.boundW += width;
+    return self;
 }
-- (void)increaseLeft:(CGFloat)width {
+- (instancetype)increaseLeft:(CGFloat)width {
     self.boundX += -width;
     self.boundW += width;
+    return self;
 }
-- (void)increaseUp:(CGFloat)width {
+- (instancetype)increaseUp:(CGFloat)width {
     self.boundY += -width;
     self.boundH += width;
+    return self;
 }
-- (void)increaseDown:(CGFloat)width {
+- (instancetype)increaseDown:(CGFloat)width {
     self.boundH += width;
+    return self;
 }
 //----------------reduce---------------------
-- (void)reduceRight:(CGFloat)width {
-    if (self.frame.size.width + self.boundW - width <= 0) {return;}
+- (instancetype)reduceRight:(CGFloat)width {
+    if (self.frame.size.width + self.boundW - width <= 0) {return self;}
     self.boundW += -width;
+    return self;
 }
-- (void)reduceLeft:(CGFloat)width {
-    if (self.frame.size.width + self.boundW - width <= 0) {return;}
+- (instancetype)reduceLeft:(CGFloat)width {
+    if (self.frame.size.width + self.boundW - width <= 0) {return self;}
     self.boundX += width;
     self.boundW += -width;
+    return self;
 }
-- (void)reduceUp:(CGFloat)width {
-    if (self.frame.size.height + self.boundH - width <= 0) {return;}
+- (instancetype)reduceUp:(CGFloat)width {
+    if (self.frame.size.height + self.boundH - width <= 0) {return self;}
     self.boundY += width;
     self.boundH += -width;
+    return self;
 }
-- (void)reduceDown:(CGFloat)width {
-    if (self.frame.size.height + self.boundH - width <= 0) {return;}
+- (instancetype)reduceDown:(CGFloat)width {
+    if (self.frame.size.height + self.boundH - width <= 0) {return self;}
     self.boundH += -width;
+    return self;
 }
 //----------------move-----------------------
-- (void)multiLand:(NSInteger)multi {
+- (instancetype)multiLand:(NSInteger)multi {
     NSAssert(multi != 0, @"multi can not be zero");
     self.boundDW = self.bounds.size.width * multi/2;
     self.boundDH = self.bounds.size.height * multi/2;
+    return self;
 }
-- (void)moveRight:(CGFloat)width {
+- (instancetype)moveRight:(CGFloat)width {
     self.boundX += width;
+    return self;
 }
-- (void)moveLeft:(CGFloat)width {
+- (instancetype)moveLeft:(CGFloat)width {
     self.boundX += -width;
+    return self;
 }
-- (void)moveUp:(CGFloat)width {
+- (instancetype)moveUp:(CGFloat)width {
     self.boundY += -width;
+    return self;
 }
-- (void)moveDown:(CGFloat)width {
+- (instancetype)moveDown:(CGFloat)width {
     self.boundY += width;
+    return self;
 }
 + (CGRect)showLand:(MCMagnifyLandButton *)button {
     CGRect frame = CGRectMake(button.frame.origin.x + button.boundX, button.frame.origin.y + button.boundY, button.frame.size.width + button.boundW, button.frame.size.height + button.boundH);
