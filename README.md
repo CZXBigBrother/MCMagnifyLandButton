@@ -1,4 +1,3 @@
-##已将代码改成链式结构方便书写
 大家在实际的开发中有没有遇到过给了你一张很小的图标,但是又想要很大点击范围的情况,通常解决方案有几种:
 ###第一种:
 方案:button 范围做大 
@@ -31,35 +30,35 @@
 /*
  *  拓展右边空间
  */
-- (void)increaseRight:(CGFloat)width;
+- (id)increaseRight:(CGFloat)width;
 /*
  *  拓展左边空间
  */
-- (void)increaseLeft:(CGFloat)width;
+- (id)increaseLeft:(CGFloat)width;
 /*
  *  拓展上层空间
  */
-- (void)increaseUp:(CGFloat)width;
+- (id)increaseUp:(CGFloat)width;
 /*
  *  拓展下层空间
  */
-- (void)increaseDown:(CGFloat)width;
+- (id)increaseDown:(CGFloat)width;
 /*
  *  向右移动
  */
-- (void)moveRight:(CGFloat)width;
+- (id)moveRight:(CGFloat)width;
 /*
  *  向左移动
  */
-- (void)moveLeft:(CGFloat)width;
+- (id)moveLeft:(CGFloat)width;
 /*
  *  向上移动
  */
-- (void)moveUp:(CGFloat)width;
+- (id)moveUp:(CGFloat)width;
 /*
  *  向下移动
  */
-- (void)moveDown:(CGFloat)width;
+- (id)moveDown:(CGFloat)width;
 /*
  *  原始大小翻倍,不包括拓展空间
  */
