@@ -14,7 +14,7 @@
 
 ---
 接下来是是给大家推荐的
-###第四中方案
+### 第四中方案
 重写button的点击范围的判断,修改button的点击范围实现 pointInside:withEvent:event 
 #先看看效果
 ![click2.gif](https://github.com/CZXBigBrother/MCMagnifyLandButton/blob/master/Gif/click2.gif)
